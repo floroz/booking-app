@@ -11,6 +11,15 @@
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
+
+    // Typography for children to inherit (search bar, user nav)
+    font-size: 1.4rem; 
+    
+    //Flexbox properties
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //
 }
 
 .content {
