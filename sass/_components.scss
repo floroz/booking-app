@@ -1,11 +1,13 @@
-///////////////LOGO
+////////////////////////////// 
+// LOGO
 
 .logo {
     height: 3.25rem;
     margin-left: 2rem;
 }
 
-///////////////SEARCH BOX
+////////////////////////////////////// 
+//SEARCH BOX
 .search {
     flex: 0 0 40%;
 
@@ -64,7 +66,8 @@
 }
 
 
-///////////////USER NAV
+//////////////////////////////////// 
+// USER NAV
 .user-nav {
 
     display: flex;
@@ -126,4 +129,82 @@
     &__user-name {
 
     }
+}
+
+//////////////////////////////////////////////
+// SIDE NAVIGATION
+
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+    &__item {
+        position: relative;
+        
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__item:hover::before,
+    &__item--active {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+        transform: scaleY(0);
+        transition: transform .2s, 
+                    width .4s cubic-bezier(1, 0, 0, 1) .2s;
+
+    }
+
+    &__link {
+        
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--color-grey-light-1);
+        text-transform: uppercase;
+        text-decoration: none;
+        
+        //////// Parent of icon and text
+        display: flex;
+        align-items: center;
+        //////// 
+
+        position: relative; // to display text, without z-index doesn't work
+        padding: 1.5rem 3rem;
+        z-index: 10; // to display on top of animation
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor;
+    }
+}
+
+
+/////////////////////////////////////////////// 
+// LEGAL TEXT
+
+.legal {
+    align-self: center; // flex item of .sidebar
+    
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+
+    padding: 2.5rem;
 }
