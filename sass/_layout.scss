@@ -10,7 +10,7 @@
 .header {
     height: 7rem;
     background-color: #fff;
-    border-bottom: var(--color-grey-light-2);
+    border-bottom: 1px solid var(--color-grey-light-2);
 
     // Typography for children to inherit (search bar, user nav)
     font-size: 1.4rem; 
@@ -39,7 +39,6 @@
 }
 
 .hotel-view {
-    background-color: orangered;
     height: 80rem;
 
     flex: 1;
