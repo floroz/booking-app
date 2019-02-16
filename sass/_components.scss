@@ -226,6 +226,10 @@
         max-width: 100%;
 
         display: block;
+
+        &:last-child {
+            max-height: -webkit-fill-available;
+        }
     }
 }
 

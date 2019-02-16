@@ -167,6 +167,8 @@ body {
   .gallery__photo {
     max-width: 100%;
     display: block; }
+    .gallery__photo:last-child {
+      max-height: -webkit-fill-available; }
 
 .overview {
   display: flex;
