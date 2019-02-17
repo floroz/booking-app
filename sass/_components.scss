@@ -149,6 +149,14 @@
         
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium)  {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium)  {
+            flex: 1;
         }
     }
 
@@ -191,6 +199,11 @@
         position: relative; // to display text, without z-index doesn't work
         padding: 1.5rem 3rem;
         z-index: 10; // to display on top of animation
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
     }
 
     &__icon {
@@ -422,6 +435,7 @@
     }
     
     &__friends {
+        display: flex;
 
     }
 
@@ -449,6 +463,11 @@
         padding: 3rem;
         margin-bottom: 3.5rem;
 
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
     }
 
     &__user {
@@ -494,6 +513,10 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem 0;
+    }
 
     &__book-now {
         text-transform: uppercase;
